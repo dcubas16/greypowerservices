@@ -1,0 +1,1 @@
+insert into Products (id, name, description) values (1,'P1', 'P1 Description');
