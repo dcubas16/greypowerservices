@@ -12,7 +12,6 @@ import javax.persistence.Table;
 	@AttributeOverride(name="name", column=@Column(name="NAME")),
 	@AttributeOverride(name="description", column=@Column(name="DESCRIPTION")),
 })
-
 public class ChemicalProduct extends Product {
 	
 	@Column(name="UNIT_OF_MEASURE")

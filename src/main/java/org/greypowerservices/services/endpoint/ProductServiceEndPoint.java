@@ -17,19 +17,22 @@ public class ProductServiceEndPoint {
 	private static final String TARGET_NAMESPACE = "http://org/greypowerservices/webservices/productservice";
 	
 	@Autowired
-	private ProductService productService;
+	ProductService productService;
 	
 	@PayloadRoot(localPart = "ChemicalProductRequest", namespace = TARGET_NAMESPACE)
 	public @ResponsePayload ChemicalProductResponse getChemicalProduct(@RequestPayload ChemicalProductRequest chemicalProductRequest) {
 		
 		ChemicalProductResponse chemicalProductResponse = new ChemicalProductResponse();
 		
-		Product product = productService.getChemicalProduct(chemicalProductRequest.getId());
+		Product product = 
+				productService.getChemicalProduct(1L);
 		
 		ChemicalProduct chemicalProduct = new ChemicalProduct();
 		chemicalProduct.setId(product.getId());
 		chemicalProduct.setName(product.getName());
 		chemicalProduct.setDescription(product.getDescription());
+		
+		chemicalProductResponse.setChemicalProduct(chemicalProduct);
 		
 		return chemicalProductResponse;
 		
