@@ -5,6 +5,8 @@ import org.greypowerservices.services.ProductService;
 import org.greypowerservices.webservices.ChemicalProduct;
 import org.greypowerservices.webservices.productservice.ChemicalProductRequest;
 import org.greypowerservices.webservices.productservice.ChemicalProductResponse;
+import org.greypowerservices.webservices.productservice.CreateChemicalProductRequest;
+import org.greypowerservices.webservices.productservice.CreateChemicalProductResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -35,6 +37,28 @@ public class ProductServiceEndPoint {
 		chemicalProductResponse.setChemicalProduct(chemicalProduct);
 		
 		return chemicalProductResponse;
+		
+	}
+	
+	@PayloadRoot(localPart = "CreateChemicalProductRequest", namespace = TARGET_NAMESPACE)
+	public @ResponsePayload CreateChemicalProductResponse createChemicalProduct(@RequestPayload CreateChemicalProductRequest createChemicalProductRequest) {
+		
+		CreateChemicalProductResponse createChemicalProductResponse = new CreateChemicalProductResponse();
+		
+		org.greypowerservices.entities.ChemicalProduct  chemicalProduct = new org.greypowerservices.entities.ChemicalProduct();
+		
+		chemicalProduct.setName(createChemicalProductRequest.getChemicalProduct().getName());
+		chemicalProduct.setDescription(createChemicalProductRequest.getChemicalProduct().getDescription());
+		chemicalProduct.setUnitOfMeasure(createChemicalProductRequest.getChemicalProduct().getUnitOfMeasure());
+		chemicalProduct.setUnitPrice(createChemicalProductRequest.getChemicalProduct().getUnitPrice());
+		chemicalProduct.setImagePath(createChemicalProductRequest.getChemicalProduct().getImagePath());
+		
+		Long id = 
+				productService.createChemicalProduct(chemicalProduct);
+		
+		createChemicalProductResponse.setId(id);
+		
+		return createChemicalProductResponse;
 		
 	}
 }

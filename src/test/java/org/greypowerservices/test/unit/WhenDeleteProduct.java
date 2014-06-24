@@ -3,6 +3,7 @@ package org.greypowerservices.test.unit;
 import org.greypowerservices.business.ProductFactory;
 import org.greypowerservices.business.ProductFactoryManager;
 import org.greypowerservices.business.ProductFactoryManagerImpl;
+import org.greypowerservices.test.configurator.TestConfigurator;
 import org.greypowerservices.test.data.mother.ProductMother;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

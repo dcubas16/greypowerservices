@@ -46,4 +46,12 @@ public class ChemicalProduct extends Product {
 	public void setUnitPrice(double unitPrice) {
 		this.unitPrice = unitPrice;
 	}
+
+	public String getImagePath() {
+		return imagePath;
+	}
+
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
+	}
 }

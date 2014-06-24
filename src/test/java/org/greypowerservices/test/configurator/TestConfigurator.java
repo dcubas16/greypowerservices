@@ -1,4 +1,4 @@
-package org.greypowerservices.test.unit;
+package org.greypowerservices.test.configurator;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

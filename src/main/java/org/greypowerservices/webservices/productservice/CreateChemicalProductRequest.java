@@ -10,8 +10,10 @@ package org.greypowerservices.webservices.productservice;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import org.greypowerservices.webservices.ChemicalProduct;
 
 
 /**
@@ -24,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="ChemicalProduct" type="{http://webservices.greypowerservices.org}ChemicalProduct"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,27 +37,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "id"
+    "chemicalProduct"
 })
-@XmlRootElement(name = "ChemicalProductRequest")
-public class ChemicalProductRequest {
+@XmlRootElement(name = "CreateChemicalProductRequest")
+public class CreateChemicalProductRequest {
 
-    protected long id;
+    @XmlElement(name = "ChemicalProduct", required = true)
+    protected ChemicalProduct chemicalProduct;
 
     /**
-     * Gets the value of the id property.
+     * Gets the value of the chemicalProduct property.
      * 
+     * @return
+     *     possible object is
+     *     {@link ChemicalProduct }
+     *     
      */
-    public long getId() {
-        return id;
+    public ChemicalProduct getChemicalProduct() {
+        return chemicalProduct;
     }
 
     /**
-     * Sets the value of the id property.
+     * Sets the value of the chemicalProduct property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link ChemicalProduct }
+     *     
      */
-    public void setId(long value) {
-        this.id = value;
+    public void setChemicalProduct(ChemicalProduct value) {
+        this.chemicalProduct = value;
     }
 
 }

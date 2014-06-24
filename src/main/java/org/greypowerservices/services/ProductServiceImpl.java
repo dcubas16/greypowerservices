@@ -3,6 +3,7 @@ package org.greypowerservices.services;
 import org.greypowerservices.business.ProductFactory;
 import org.greypowerservices.business.ProductFactoryManager;
 import org.greypowerservices.business.ProductFactoryManagerImpl;
+import org.greypowerservices.entities.ChemicalProduct;
 import org.greypowerservices.entities.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,5 +24,14 @@ public class ProductServiceImpl implements ProductService{
 		
 		return product;
 	}
-	
+
+	public Long createChemicalProduct(ChemicalProduct chemicalProduct) {
+		
+		productFactoryManager = new ProductFactoryManagerImpl(productFactory);
+		
+		Long id = productFactoryManager.createProduct(chemicalProduct);
+		
+		return id;
+	}
+
 }
