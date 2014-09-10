@@ -7,15 +7,12 @@
 	<xsd:import namespace="http://webservices.greypowerservices.org"
 		schemaLocation="UnitMeasure.xsd"/>
 	<xsd:element name="GetUnitMeasureRequest">
-		<xsd:complexType>
-			<xsd:sequence>
-			</xsd:sequence>
-		</xsd:complexType>
+		<xsd:complexType/>
 	</xsd:element>
 	<xsd:element name="GetUnitMeasureResponse">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element name="UnitMeasure" type="unitMeasure:UnitMeasure"/>
+				<xsd:element name="UnitMeasure" type="unitMeasure:UnitMeasure" maxOccurs="unbounded" minOccurs="0" />
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
