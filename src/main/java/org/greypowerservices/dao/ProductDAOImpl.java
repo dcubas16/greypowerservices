@@ -58,4 +58,16 @@ public class ProductDAOImpl extends HibernateDaoSupport implements ProductDAO {
 		
 	}
 
+	@SuppressWarnings("unchecked")
+	public List<Product> getAllProducts() {
+		Object objectProducts = getHibernateTemplate().find("FROM Product");
+		List<Product> products = new ArrayList<Product>();
+
+		if (!objectProducts.equals(null) && objectProducts instanceof List) {
+			products = (List<Product>) objectProducts;
+		}
+
+		return products;
+	}
+
 }

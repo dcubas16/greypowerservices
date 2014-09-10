@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import org.greypowerservices.webservices.ChemicalProduct;
+import org.greypowerservices.webservices.UnitMeasure;
 
 
 /**
@@ -26,7 +26,7 @@ import org.greypowerservices.webservices.ChemicalProduct;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="ChemicalProduct" type="{http://webservices.greypowerservices.org}ChemicalProduct"/>
+ *         &lt;element name="UnitMeasure" type="{http://webservices.greypowerservices.org}UnitMeasure"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,36 +37,36 @@ import org.greypowerservices.webservices.ChemicalProduct;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "chemicalProduct"
+    "unitMeasure"
 })
-@XmlRootElement(name = "CreateChemicalProductRequest")
-public class CreateChemicalProductRequest {
+@XmlRootElement(name = "GetUnitMeasureResponse")
+public class GetUnitMeasureResponse {
 
-    @XmlElement(name = "ChemicalProduct", required = true)
-    protected ChemicalProduct chemicalProduct;
+    @XmlElement(name = "UnitMeasure", required = true)
+    protected UnitMeasure unitMeasure;
 
     /**
-     * Gets the value of the chemicalProduct property.
+     * Gets the value of the unitMeasure property.
      * 
      * @return
      *     possible object is
-     *     {@link ChemicalProduct }
+     *     {@link UnitMeasure }
      *     
      */
-    public ChemicalProduct getChemicalProduct() {
-        return chemicalProduct;
+    public UnitMeasure getUnitMeasure() {
+        return unitMeasure;
     }
 
     /**
-     * Sets the value of the chemicalProduct property.
+     * Sets the value of the unitMeasure property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ChemicalProduct }
+     *     {@link UnitMeasure }
      *     
      */
-    public void setChemicalProduct(ChemicalProduct value) {
-        this.chemicalProduct = value;
+    public void setUnitMeasure(UnitMeasure value) {
+        this.unitMeasure = value;
     }
 
 }

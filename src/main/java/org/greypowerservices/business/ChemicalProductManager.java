@@ -48,4 +48,8 @@ public class ChemicalProductManager implements ProductManager {
 		return productDAO.getProductsByName(name);
 	}
 
+	public List<Product> getAllProducts() {
+		return productDAO.getAllProducts();
+	}
+
 }

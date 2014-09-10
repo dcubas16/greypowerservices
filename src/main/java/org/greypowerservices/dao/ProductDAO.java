@@ -20,5 +20,7 @@ public interface ProductDAO {
 	public void deleteProduct(Product product);
 
 	public void deleteProduct(Long id);
+
+	public List<Product> getAllProducts();
 	
 }

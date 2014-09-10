@@ -12,5 +12,6 @@ public interface ProductFactory {
 	public Product getProductById(Long id);
 	public void deleteProduct(Long id);
 	public List<Product> getProductsByName(String name);
+	public List<Product> getAllProducts();
 	
 }

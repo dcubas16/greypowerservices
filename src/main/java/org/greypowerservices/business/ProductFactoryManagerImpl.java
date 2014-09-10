@@ -47,5 +47,10 @@ public class ProductFactoryManagerImpl implements ProductFactoryManager{
 		return this.productFactory.getProductsByName(name);
 	}
 
+	public List<Product> getAllProducts() {
+		// TODO Auto-generated method stub
+		return this.productFactory.getAllProducts();
+	}
+
 
 }

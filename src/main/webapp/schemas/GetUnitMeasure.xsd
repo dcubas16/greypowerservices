@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://org/greypowerservices/webservices/productservice"
+	xmlns:unitMeasure="http://webservices.greypowerservices.org" 
+	targetNamespace="http://org/greypowerservices/webservices/productservice"
+	elementFormDefault="qualified">
+	<xsd:import namespace="http://webservices.greypowerservices.org"
+		schemaLocation="UnitMeasure.xsd"/>
+	<xsd:element name="GetUnitMeasureRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="GetUnitMeasureResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="UnitMeasure" type="unitMeasure:UnitMeasure"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
+

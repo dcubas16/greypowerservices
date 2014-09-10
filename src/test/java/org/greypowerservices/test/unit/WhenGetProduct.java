@@ -71,5 +71,15 @@ public class WhenGetProduct extends TestConfigurator{
 
 		assertTrue(products.isEmpty());
 	}
+	
+	@Test
+	public void thenShouldReturnAllProducts() {
+		
+		productFactoryManager = new ProductFactoryManagerImpl(productFactory);
+		
+		List<Product> products = productFactoryManager.getAllProducts();
+
+		assertTrue(!products.isEmpty());
+	}
 
 }

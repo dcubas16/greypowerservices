@@ -11,5 +11,6 @@ public interface ProductFactoryManager {
 	public void deleteProduct(Product product);
 	public void updateProduct(Product product);
 	public List<Product> getProductsByName(String name);
+	public List<Product> getAllProducts();
 	
 }

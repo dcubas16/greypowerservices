@@ -10,10 +10,8 @@ package org.greypowerservices.webservices.productservice;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import org.greypowerservices.webservices.ChemicalProduct;
 
 
 /**
@@ -26,7 +24,6 @@ import org.greypowerservices.webservices.ChemicalProduct;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="ChemicalProduct" type="{http://webservices.greypowerservices.org}ChemicalProduct"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,37 +33,9 @@ import org.greypowerservices.webservices.ChemicalProduct;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "chemicalProduct"
-})
-@XmlRootElement(name = "CreateChemicalProductRequest")
-public class CreateChemicalProductRequest {
+@XmlType(name = "")
+@XmlRootElement(name = "GetUnitMeasureRequest")
+public class GetUnitMeasureRequest {
 
-    @XmlElement(name = "ChemicalProduct", required = true)
-    protected ChemicalProduct chemicalProduct;
-
-    /**
-     * Gets the value of the chemicalProduct property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemicalProduct }
-     *     
-     */
-    public ChemicalProduct getChemicalProduct() {
-        return chemicalProduct;
-    }
-
-    /**
-     * Sets the value of the chemicalProduct property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemicalProduct }
-     *     
-     */
-    public void setChemicalProduct(ChemicalProduct value) {
-        this.chemicalProduct = value;
-    }
 
 }
