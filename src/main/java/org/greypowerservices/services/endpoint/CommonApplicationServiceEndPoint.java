@@ -22,17 +22,14 @@ public class CommonApplicationServiceEndPoint {
 	@PayloadRoot(localPart = "GetUnitMeasureRequest", namespace = TARGET_NAMESPACE)
 	public @ResponsePayload GetUnitMeasureResponse GetUnitMeasure() {
 		List<UnitMeasure> unitsMeasure = commonApplicationService.getUnitsMeasure();
-		
 		GetUnitMeasureResponse getUnitMeasureResponse = new GetUnitMeasureResponse();
-		List<GetUnitMeasureResponse> getUnitMeasureResponseList = new ArrayList<GetUnitMeasureResponse>();
+
 		for (UnitMeasure unitMeasure : unitsMeasure) {
 			org.greypowerservices.webservices.UnitMeasure unitMeasure2 = new org.greypowerservices.webservices.UnitMeasure();
 			unitMeasure2.setName(unitMeasure.getName());
 			unitMeasure2.setAbbreviation(unitMeasure.getAbbreviation());
 			unitMeasure2.setId(unitMeasure.getId());
-			getUnitMeasureResponseList.add();
-//			getUnitMeasureResponseList.add(unitMeasure2);
-//			getUnitMeasureResponse.setUnitMeasure(unitMeasure2);
+			getUnitMeasureResponse.getUnitMeasure().add(unitMeasure2);
 		}
 		
 		return getUnitMeasureResponse;
