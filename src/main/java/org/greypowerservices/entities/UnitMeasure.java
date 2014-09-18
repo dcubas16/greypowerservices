@@ -24,7 +24,16 @@ public class UnitMeasure {
 	@NotEmpty
 	@Column(name="ABBREVIATION")
 	private String abbreviation;
+	
+	public UnitMeasure(Long id, String name, String abbreviation) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.abbreviation = abbreviation;
+	}
 
+	public UnitMeasure() {}
+	
 	public Long getId() {
 		return id;
 	}

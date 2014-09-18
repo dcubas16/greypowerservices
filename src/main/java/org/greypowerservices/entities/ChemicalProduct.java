@@ -4,6 +4,7 @@ import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,8 +15,8 @@ import javax.persistence.Table;
 })
 public class ChemicalProduct extends Product {
 	
-	@Column(name="UNIT_OF_MEASURE")
-	private String unitOfMeasure;
+//	@Column(name="UNIT_OF_MEASURE")
+//	private String unitOfMeasure;
 	
 	@Column(name="PRICE")
 	private double unitPrice;
@@ -23,20 +24,23 @@ public class ChemicalProduct extends Product {
 	@Column(name="IMAGE_PATH")
 	private String imagePath;
 
+	@ManyToOne
+	private UnitMeasure unitMeasure;
+	
 	public ChemicalProduct() {}
 	
-	public ChemicalProduct(String unitOfMeasure, double unitPrice, String imagePath) {
-		this.unitOfMeasure = unitOfMeasure;
+	public ChemicalProduct(UnitMeasure unitMeasure, double unitPrice, String imagePath) {
+		this.unitMeasure = unitMeasure;
 		this.unitPrice = unitPrice;
 		this.imagePath = imagePath;
 	}
 	
-	public String getUnitOfMeasure() {
-		return unitOfMeasure;
+	public UnitMeasure getUnitMeasure() {
+		return unitMeasure;
 	}
 
-	public void setUnitOfMeasure(String unitOfMeasure) {
-		this.unitOfMeasure = unitOfMeasure;
+	public void setUnitMeasure(UnitMeasure unitMeasure) {
+		this.unitMeasure = unitMeasure;
 	}
 
 	public double getUnitPrice() {

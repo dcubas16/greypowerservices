@@ -49,7 +49,7 @@ public class ProductServiceEndPoint {
 		
 		chemicalProduct.setName(createChemicalProductRequest.getChemicalProduct().getName());
 		chemicalProduct.setDescription(createChemicalProductRequest.getChemicalProduct().getDescription());
-		chemicalProduct.setUnitOfMeasure(createChemicalProductRequest.getChemicalProduct().getUnitOfMeasure());
+		chemicalProduct.setUnitMeasure(createChemicalProductRequest.getChemicalProduct().getUnitMeasureId());
 		chemicalProduct.setUnitPrice(createChemicalProductRequest.getChemicalProduct().getUnitPrice());
 		chemicalProduct.setImagePath(createChemicalProductRequest.getChemicalProduct().getImagePath());
 		
