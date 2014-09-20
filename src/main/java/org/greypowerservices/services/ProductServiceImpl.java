@@ -1,5 +1,7 @@
 package org.greypowerservices.services;
 
+import java.util.List;
+
 import org.greypowerservices.business.ProductFactory;
 import org.greypowerservices.business.ProductFactoryManager;
 import org.greypowerservices.business.ProductFactoryManagerImpl;
@@ -32,6 +34,13 @@ public class ProductServiceImpl implements ProductService{
 		Long id = productFactoryManager.createProduct(chemicalProduct);
 		
 		return id;
+	}
+
+	public List<ChemicalProduct> getAllChemicalProducts() {
+		productFactoryManager = new ProductFactoryManagerImpl(productFactory);
+		
+		return productFactoryManager.getAllChemicalProducts();
+		
 	}
 
 }

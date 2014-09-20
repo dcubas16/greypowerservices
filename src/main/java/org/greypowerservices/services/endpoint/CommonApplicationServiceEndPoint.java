@@ -1,6 +1,5 @@
 package org.greypowerservices.services.endpoint;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.greypowerservices.entities.UnitMeasure;
@@ -14,14 +13,14 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 @Endpoint
 public class CommonApplicationServiceEndPoint {
 
-	private static final String TARGET_NAMESPACE = "http://org/greypowerservices/webservices/productservice";
+	private static final String TARGET_NAMESPACE = "http:org/greypowerservices/webservices/productservice";
 	
 	@Autowired
 	CommonApplicationService commonApplicationService;
 	
 	@PayloadRoot(localPart = "GetUnitMeasureRequest", namespace = TARGET_NAMESPACE)
 	public @ResponsePayload GetUnitMeasureResponse GetUnitMeasure() {
-		List<UnitMeasure> unitsMeasure = commonApplicationService.getUnitsMeasure();
+	List<UnitMeasure> unitsMeasure = commonApplicationService.getUnitsMeasure();
 		GetUnitMeasureResponse getUnitMeasureResponse = new GetUnitMeasureResponse();
 
 		for (UnitMeasure unitMeasure : unitsMeasure) {

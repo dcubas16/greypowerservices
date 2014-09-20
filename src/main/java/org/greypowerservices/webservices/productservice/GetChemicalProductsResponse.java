@@ -8,6 +8,8 @@
 
 package org.greypowerservices.webservices.productservice;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -25,7 +27,7 @@ import org.greypowerservices.webservices.ChemicalProduct;
  * &lt;complexType>
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
+ *       &lt;sequence maxOccurs="unbounded" minOccurs="0">
  *         &lt;element name="ChemicalProduct" type="{http://webservices.greypowerservices.org}ChemicalProduct"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -39,34 +41,39 @@ import org.greypowerservices.webservices.ChemicalProduct;
 @XmlType(name = "", propOrder = {
     "chemicalProduct"
 })
-@XmlRootElement(name = "CreateChemicalProductRequest")
-public class CreateChemicalProductRequest {
+@XmlRootElement(name = "GetChemicalProductsResponse")
+public class GetChemicalProductsResponse {
 
-    @XmlElement(name = "ChemicalProduct", required = true)
-    protected ChemicalProduct chemicalProduct;
+    @XmlElement(name = "ChemicalProduct")
+    protected List<ChemicalProduct> chemicalProduct;
 
     /**
      * Gets the value of the chemicalProduct property.
      * 
-     * @return
-     *     possible object is
-     *     {@link ChemicalProduct }
-     *     
-     */
-    public ChemicalProduct getChemicalProduct() {
-        return chemicalProduct;
-    }
-
-    /**
-     * Sets the value of the chemicalProduct property.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the chemicalProduct property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemicalProduct }
-     *     
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getChemicalProduct().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ChemicalProduct }
+     * 
+     * 
      */
-    public void setChemicalProduct(ChemicalProduct value) {
-        this.chemicalProduct = value;
+    public List<ChemicalProduct> getChemicalProduct() {
+        if (chemicalProduct == null) {
+            chemicalProduct = new ArrayList<ChemicalProduct>();
+        }
+        return this.chemicalProduct;
     }
 
 }

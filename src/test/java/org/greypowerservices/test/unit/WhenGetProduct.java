@@ -7,6 +7,7 @@ import java.util.List;
 import org.greypowerservices.business.ProductFactory;
 import org.greypowerservices.business.ProductFactoryManager;
 import org.greypowerservices.business.ProductFactoryManagerImpl;
+import org.greypowerservices.entities.ChemicalProduct;
 import org.greypowerservices.entities.Product;
 import org.greypowerservices.test.configurator.TestConfigurator;
 import org.greypowerservices.test.data.mother.ProductMother;
@@ -80,6 +81,16 @@ public class WhenGetProduct extends TestConfigurator{
 		List<Product> products = productFactoryManager.getAllProducts();
 
 		assertTrue(!products.isEmpty());
+	}
+	
+	@Test
+	public void thenShouldReturnAllChemicalProducts() {
+		
+		productFactoryManager = new ProductFactoryManagerImpl(productFactory);
+		
+		List<ChemicalProduct> chemicalProducts = productFactoryManager.getAllChemicalProducts();
+
+		assertTrue(!chemicalProducts.isEmpty());	
 	}
 
 }

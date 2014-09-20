@@ -2,6 +2,7 @@ package org.greypowerservices.business;
 import java.util.List;
 
 import org.greypowerservices.dao.ProductDAO;
+import org.greypowerservices.entities.ChemicalProduct;
 import org.greypowerservices.entities.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,6 +51,10 @@ public class ChemicalProductManager implements ProductManager {
 
 	public List<Product> getAllProducts() {
 		return productDAO.getAllProducts();
+	}
+
+	public List<ChemicalProduct> getAllChemicalProducts() {
+		return productDAO.getAllChemicalProducts();
 	}
 
 }

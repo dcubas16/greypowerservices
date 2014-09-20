@@ -2,6 +2,7 @@ package org.greypowerservices.dao;
 
 import java.util.List;
 
+import org.greypowerservices.entities.ChemicalProduct;
 import org.greypowerservices.entities.Product;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,5 +23,7 @@ public interface ProductDAO {
 	public void deleteProduct(Long id);
 
 	public List<Product> getAllProducts();
+
+	public List<ChemicalProduct> getAllChemicalProducts();
 	
 }

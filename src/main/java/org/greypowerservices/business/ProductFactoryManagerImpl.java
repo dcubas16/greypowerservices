@@ -2,6 +2,7 @@ package org.greypowerservices.business;
 
 import java.util.List;
 
+import org.greypowerservices.entities.ChemicalProduct;
 import org.greypowerservices.entities.Product;
 import org.springframework.stereotype.Service;
 
@@ -50,6 +51,11 @@ public class ProductFactoryManagerImpl implements ProductFactoryManager{
 	public List<Product> getAllProducts() {
 		// TODO Auto-generated method stub
 		return this.productFactory.getAllProducts();
+	}
+
+	public List<ChemicalProduct> getAllChemicalProducts() {
+		// TODO Auto-generated method stub
+		return this.productFactory.getAllChemicalProducts();
 	}
 
 

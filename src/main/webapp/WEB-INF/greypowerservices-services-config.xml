@@ -64,4 +64,5 @@
 		<property name="locationUri" value="/endpoints" />
 	</bean>
 	
+	
 </beans>

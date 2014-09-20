@@ -3,6 +3,7 @@ package org.greypowerservices.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.greypowerservices.entities.ChemicalProduct;
 import org.greypowerservices.entities.Product;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,6 +69,17 @@ public class ProductDAOImpl extends HibernateDaoSupport implements ProductDAO {
 		}
 
 		return products;
+	}
+
+	public List<ChemicalProduct> getAllChemicalProducts() {
+		Object objectChemicalProducts = getHibernateTemplate().find("FROM ChemicalProduct");
+		List<ChemicalProduct> chemicalProducts = new ArrayList<ChemicalProduct>();
+
+		if (!objectChemicalProducts.equals(null) && objectChemicalProducts instanceof List) {
+			chemicalProducts = (List<ChemicalProduct>) objectChemicalProducts;
+		}
+
+		return chemicalProducts;
 	}
 
 }

@@ -12,7 +12,7 @@
 			<xs:element name="description" type="xs:string" />
 			<xs:element name="unitMeasure_id" type="xs:long" />
 			<xs:element name="unitPrice" type="xs:double" />
-			<xs:element name="imagePath" type="xs:string" />
+			<xs:element name="imagePath" type="xs:string" /> 
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

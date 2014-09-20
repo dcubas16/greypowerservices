@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://org/greypowerservices/webservices/productservice"
+	xmlns:chemicalProduct="http://webservices.greypowerservices.org" 
+	targetNamespace="http://org/greypowerservices/webservices/productservice"
+	elementFormDefault="qualified">
+	<xsd:import namespace="http://webservices.greypowerservices.org"
+		schemaLocation="ChemicalProduct.xsd" />
+	<xsd:element name="GetChemicalProductsRequest">
+		<xsd:complexType/>
+	</xsd:element>
+	
+	<xsd:element name="GetChemicalProductsResponse">
+		<xsd:complexType>
+			<xsd:sequence maxOccurs="unbounded" minOccurs="0">
+				<xsd:element name="ChemicalProduct" type="chemicalProduct:ChemicalProduct" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
+

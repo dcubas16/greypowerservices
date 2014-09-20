@@ -32,8 +32,8 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
-@XmlRootElement(name = "GetUnitMeasureRequest")
-public class GetUnitMeasureRequest {
+@XmlRootElement(name = "GetChemicalProductsRequest")
+public class GetChemicalProductsRequest {
 
 
 }
