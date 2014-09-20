@@ -8,6 +8,7 @@
 		schemaLocation="UnitMeasure.xsd"/>
 	<xsd:element name="GetUnitMeasureRequest">
 		<xsd:complexType/>
+		
 	</xsd:element>
 	<xsd:element name="GetUnitMeasureResponse">
 		<xsd:complexType>

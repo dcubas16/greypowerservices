@@ -63,6 +63,24 @@
 		<property name="serviceName" value="GetUnitMeasure" />
 		<property name="locationUri" value="/endpoints" />
 	</bean>
-	
-	
+
+	<bean id="GetChemicalProducts"
+		class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"
+		lazy-init="true">
+		<property name="schemaCollection">
+			<bean
+				class="org.springframework.xml.xsd.commons.CommonsXsdSchemaCollection">
+				<property name="inline" value="true" />
+				<property name="xsds">
+					<list>
+						<value>schemas/GetChemicalProductsService.xsd</value>
+					</list>
+				</property>
+			</bean>
+		</property>
+		<property name="portTypeName" value="GetChemicalProducts" />
+		<property name="serviceName" value="GetChemicalProducts" />
+		<property name="locationUri" value="/endpoints" />
+	</bean>
+
 </beans>
